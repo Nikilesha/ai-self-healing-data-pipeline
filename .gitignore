@@ -6,6 +6,16 @@ __pycache__/
 # C extensions
 *.so
 
+# Airflow
+logs/
+airflow.db
+plugins/__pycache__/
+__pycache__/
+*.pyc
+
+# Scheduler metadata
+data/scheduler/
+
 # Distribution / packaging
 .Python
 build/
