@@ -1,7 +1,11 @@
+version: '3.8'
+
 services:
 
   postgres:
     image: postgres:15
+
+    container_name: airflow-postgres
 
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
@@ -11,11 +15,15 @@ services:
     ports:
       - "5432:5432"
 
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    restart: unless-stopped
+
   airflow:
     image: apache/airflow:2.8.3
 
-    env_file:
-      - .env
+    container_name: airflow
 
     depends_on:
       - postgres
@@ -30,6 +38,20 @@ services:
 
     environment:
       AIRFLOW__CORE__EXECUTOR: SequentialExecutor
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow123@postgres:5432/airflow
+
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+
+      AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "True"
+
+      # Dashboard Login
+      _AIRFLOW_WWW_USER_USERNAME: ${AIRFLOW_USERNAME}
+      _AIRFLOW_WWW_USER_PASSWORD: ${AIRFLOW_PASSWORD}
 
     command: standalone
+
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
