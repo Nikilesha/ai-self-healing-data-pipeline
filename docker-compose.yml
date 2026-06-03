@@ -39,7 +39,7 @@ services:
     environment:
       AIRFLOW__CORE__EXECUTOR: SequentialExecutor
 
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow123@postgres:5432/airflow
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
 
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
 
@@ -48,6 +48,10 @@ services:
       # Dashboard Login
       _AIRFLOW_WWW_USER_USERNAME: ${AIRFLOW_USERNAME}
       _AIRFLOW_WWW_USER_PASSWORD: ${AIRFLOW_PASSWORD}
+
+      RAW_DATA_PATH: ${RAW_DATA_PATH}
+      PROCESSED_DATA_PATH: ${PROCESSED_DATA_PATH}
+      PROCESSED_DATA_PATH_FILENAME: ${PROCESSED_DATA_PATH_FILENAME}
 
     command: standalone
 

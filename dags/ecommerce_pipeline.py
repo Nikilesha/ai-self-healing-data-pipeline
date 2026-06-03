@@ -2,26 +2,25 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime
 import pandas as pd
-
+from dotenv import load_dotenv
 import os
 
 
+load_dotenv()
 
 # data paths from .env
 CSV_PATH = os.getenv("RAW_DATA_PATH")
 PROCESSED_DATA_PATH = os.getenv("PROCESSED_DATA_PATH")
 PROCESSED_DATA_PATH_FILENAME = os.getenv("PROCESSED_DATA_PATH_FILENAME")
-OUTPUT_PATH = os.path.join(PROCESSED_DATA_PATH, PROCESSED_DATA_PATH_FILENAME)
+OUTPUT_PATH = os.path.join(PROCESSED_DATA_PATH,PROCESSED_DATA_PATH_FILENAME)
 
 # extract, transform, validate functions
 def extract_data():
     df = pd.read_csv(CSV_PATH)
-    #print("RAW_DATA_PATH =", CSV_PATH)
     print(df.head())
 
 def transform_data():
-    #print("PROCESSED_DATA_PATH =", OUTPUT_PATH)
-    #print("PROCESSED_DATA_PATH_FILENAME =", PROCESSED_DATA_PATH_FILENAME)
+    print("PROCESSED_DATA_PATH =", OUTPUT_PATH)
 
     df = pd.read_csv(CSV_PATH)
 
@@ -61,4 +60,3 @@ with DAG(
 
     # set task dependencies
     extract_task >> transform_task >> validate_task
-
