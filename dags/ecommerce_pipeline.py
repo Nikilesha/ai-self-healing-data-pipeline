@@ -4,36 +4,35 @@ from datetime import datetime
 import pandas as pd
 from dotenv import load_dotenv
 import os
+from tasks.extract import task_extract_data
+from tasks.transform import task_transform_data
+#from tasks.validate import task_validate_data
 
 
 load_dotenv()
 
 # data paths from .env
-CSV_PATH = os.getenv("RAW_DATA_PATH")
-PROCESSED_DATA_PATH = os.getenv("PROCESSED_DATA_PATH")
-PROCESSED_DATA_PATH_FILENAME = os.getenv("PROCESSED_DATA_PATH_FILENAME")
-OUTPUT_PATH = os.path.join(PROCESSED_DATA_PATH,PROCESSED_DATA_PATH_FILENAME)
+
+PROCESSED_DATA_PATH = os.getenv(
+    "PROCESSED_DATA_PATH",
+    "/opt/airflow/data/processed"
+)
+OUTPUT_PATH = os.path.join(
+    PROCESSED_DATA_PATH,
+    "orders_cleaned.csv"
+)
+
+JSON_PATH = os.getenv("JSON_FILE_PATH")
 
 # extract, transform, validate functions
-def extract_data():
-    df = pd.read_csv(CSV_PATH)
-    print(df.head())
+def extract_data():    
+    task_extract_data()
 
 def transform_data():
-    print("PROCESSED_DATA_PATH =", OUTPUT_PATH)
-
-    df = pd.read_csv(CSV_PATH)
-
-    df.columns = (df.columns.str.strip().str.lower())
-
-    df.to_csv(OUTPUT_PATH, index=False)
-    print(df)
+    task_transform_data(JSON_PATH,OUTPUT_PATH)
 
 def validate_data():
-    df = pd.read_csv(OUTPUT_PATH)
-
-    null_counts = df.isnull().sum()
-    print(null_counts)
+    pass
 
     
 # define the DAG
@@ -60,3 +59,4 @@ with DAG(
 
     # set task dependencies
     extract_task >> transform_task >> validate_task
+

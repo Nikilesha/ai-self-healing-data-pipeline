@@ -1,32 +1,36 @@
-version: '3.8'
-
 services:
 
   postgres:
     image: postgres:15
-
     container_name: airflow-postgres
-
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
-
     ports:
       - "5432:5432"
-
     volumes:
       - postgres_data:/var/lib/postgresql/data
-
     restart: unless-stopped
+
+  api:
+    image: python:3.10
+    container_name: mock-api
+    working_dir: /app
+    volumes:
+      - ./mock_api:/app
+      - ./data:/opt/airflow/data
+    command: sh -c "pip install fastapi uvicorn pandas && uvicorn app:app --host 0.0.0.0 --port 8000"
+    ports:
+      - "8000:8000"
 
   airflow:
     image: apache/airflow:2.8.3
-
     container_name: airflow
 
     depends_on:
       - postgres
+      - api
 
     ports:
       - "8080:8080"
@@ -35,26 +39,27 @@ services:
       - ./dags:/opt/airflow/dags
       - ./data:/opt/airflow/data
       - ./logs:/opt/airflow/logs
+      
+
+    env_file:
+      - .env
 
     environment:
       AIRFLOW__CORE__EXECUTOR: SequentialExecutor
-
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
-
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
-
       AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "True"
 
-      # Dashboard Login
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+
       _AIRFLOW_WWW_USER_USERNAME: ${AIRFLOW_USERNAME}
       _AIRFLOW_WWW_USER_PASSWORD: ${AIRFLOW_PASSWORD}
 
       RAW_DATA_PATH: ${RAW_DATA_PATH}
       PROCESSED_DATA_PATH: ${PROCESSED_DATA_PATH}
       PROCESSED_DATA_PATH_FILENAME: ${PROCESSED_DATA_PATH_FILENAME}
+      JSON_FILE_PATH: ${JSON_FILE_PATH}
 
     command: standalone
-
     restart: unless-stopped
 
 volumes:
