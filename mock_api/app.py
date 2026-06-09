@@ -18,7 +18,7 @@ def home():
     }
 
 @app.get("/orders")
-def get_orders(limit: int = 100):
+def get_orders(page: int = 1 ,limit: int = 100):
 
     df = pd.read_csv(CSV_PATH)
 
@@ -28,4 +28,7 @@ def get_orders(limit: int = 100):
     # Convert NaN to None for valid JSON
     df = df.where(pd.notnull(df), None)
 
-    return df.head(limit).to_dict(orient="records")
+    start = (page - 1) * limit
+    end = start + limit
+
+    return df.iloc[start:end].to_dict(orient="records")
