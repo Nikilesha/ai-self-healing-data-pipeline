@@ -3,9 +3,9 @@ from airflow.operators.python import PythonOperator
 from datetime import datetime
 import os
 from dotenv import load_dotenv
-
 from tasks.extract import task_extract_data
 from tasks.transform import task_transform_data
+from tasks.validate import task_validate_data
 
 load_dotenv()
 
@@ -34,7 +34,7 @@ def extract_data():
     return task_extract_data()
 
 def validate_data():
-    pass
+    task_validate_data(JSON_PATH)
 
 def load_data(**context):
     ti = context["ti"]

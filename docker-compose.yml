@@ -59,6 +59,8 @@ services:
       FAILED_DATA_PATH: ${FAILED_DATA_PATH}
       JSON_FILE_PATH: ${JSON_FILE_PATH}
       METADATA_PATH: ${METADATA_PATH}
+      QUARANTINE_DIR_PATH: ${QUARANTINE_DIR_PATH}
+      REPORT_DIR_PATH: ${REPORT_DIR_PATH}
 
     command: standalone
     restart: unless-stopped
