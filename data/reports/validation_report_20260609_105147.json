@@ -1,0 +1,16 @@
+{
+    "status": "FAILED",
+    "quality_score": 0,
+    "report": {
+        "timestamp": "2026-06-09 10:51:47.769456",
+        "total_records": 2020,
+        "missing_customer_name": 39,
+        "missing_email": 40,
+        "missing_order_date": 40,
+        "duplicate_orders": 58,
+        "negative_quantity": 20,
+        "negative_amount": 14
+    },
+    "ge_results": {},
+    "timestamp": "2026-06-09 10:51:47.780081"
+}
