@@ -3,7 +3,7 @@
         {
             "ORDER_ID": "ORD000001",
             "customer_id": "CUST9935",
-            "CUSTOMER_NAME": null,
+            "name": null,
             "customer_email": "jillrhodes@miller.com",
             "ORDER_DATE": "2025-11-24 03:01:00",
             "product_id": "PROD189",
@@ -25,7 +25,7 @@
         {
             "ORDER_ID": "ORD000002",
             "customer_id": "CUST7873",
-            "CUSTOMER_NAME": "  Ian Cooper  ",
+            "name": "  Ian Cooper  ",
             "customer_email": "blairamanda@yahoo.com",
             "ORDER_DATE": "2025-04-22 07:32:00",
             "product_id": "PROD325",
@@ -47,7 +47,7 @@
         {
             "ORDER_ID": "ORD000003",
             "customer_id": "CUST7224",
-            "CUSTOMER_NAME": "Lisa Jackson",
+            "name": "Lisa Jackson",
             "customer_email": "stevennelson@watts.com",
             "ORDER_DATE": "2025-12-24 13:21:00",
             "product_id": "PROD199",
@@ -69,7 +69,7 @@
         {
             "ORDER_ID": "ORD000004",
             "customer_id": "CUST5803",
-            "CUSTOMER_NAME": "Zachary Hicks",
+            "name": "Zachary Hicks",
             "customer_email": "callahaneric@conner.org",
             "ORDER_DATE": "2026-02-18 01:46:00",
             "product_id": "PROD949",
@@ -91,7 +91,7 @@
         {
             "ORDER_ID": "ORD000005",
             "customer_id": "CUST7227",
-            "CUSTOMER_NAME": "Mark Lynch",
+            "name": "Mark Lynch",
             "customer_email": "kathryn88@george.com",
             "ORDER_DATE": "2025-12-27 02:02:00",
             "product_id": "PROD384",
@@ -113,7 +113,7 @@
         {
             "ORDER_ID": "ORD000006",
             "customer_id": "CUST3803",
-            "CUSTOMER_NAME": "Betty Alvarez",
+            "name": "Betty Alvarez",
             "customer_email": "allison96@hickman.com",
             "ORDER_DATE": "2025-07-01 06:42:00",
             "product_id": "PROD646",
@@ -135,7 +135,7 @@
         {
             "ORDER_ID": "ORD000007",
             "customer_id": "CUST4752",
-            "CUSTOMER_NAME": "Miranda Khan",
+            "name": "Miranda Khan",
             "customer_email": "kristenaguirre@gmail.com",
             "ORDER_DATE": "2025-05-19 20:44:00",
             "product_id": "PROD941",
@@ -157,7 +157,7 @@
         {
             "ORDER_ID": "ORD000008",
             "customer_id": "CUST8517",
-            "CUSTOMER_NAME": "  Savannah Garcia  ",
+            "name": "  Savannah Garcia  ",
             "customer_email": "housemelinda@russell.com",
             "ORDER_DATE": "2025-02-03 06:58:00",
             "product_id": "PROD246",
@@ -179,7 +179,7 @@
         {
             "ORDER_ID": "ORD000009",
             "customer_id": "CUST9085",
-            "CUSTOMER_NAME": "Thomas Schmidt",
+            "name": "Thomas Schmidt",
             "customer_email": "yorkcasey@leonard.biz",
             "ORDER_DATE": "2026-01-18 18:27:00",
             "product_id": "PROD193",
@@ -201,7 +201,7 @@
         {
             "ORDER_ID": "ORD000010",
             "customer_id": "CUST5119",
-            "CUSTOMER_NAME": "Dean Santiago",
+            "name": "Dean Santiago",
             "customer_email": "josephanderson@hotmail.com",
             "ORDER_DATE": "2026-02-10 21:27:00",
             "product_id": "PROD666",
@@ -223,7 +223,7 @@
         {
             "ORDER_ID": "ORD000011",
             "customer_id": "CUST8433",
-            "CUSTOMER_NAME": "Dr. Kendra Contreras",
+            "name": "Dr. Kendra Contreras",
             "customer_email": "  mcmillandennis@gmail.com  ",
             "ORDER_DATE": "2025-12-16 17:48:00",
             "product_id": "PROD103",
@@ -245,7 +245,7 @@
         {
             "ORDER_ID": "ORD000012",
             "customer_id": "CUST3646",
-            "CUSTOMER_NAME": "Carlos Whitney",
+            "name": "Carlos Whitney",
             "customer_email": "barnold@smith.com",
             "ORDER_DATE": "2025-09-17 03:55:00",
             "product_id": "PROD652",
@@ -267,7 +267,7 @@
         {
             "ORDER_ID": "ORD000013",
             "customer_id": "CUST4946",
-            "CUSTOMER_NAME": "Allison Doyle",
+            "name": "Allison Doyle",
             "customer_email": "vpham@gmail.com",
             "ORDER_DATE": "2025-09-08 00:07:00",
             "product_id": "PROD999",
@@ -289,7 +289,7 @@
         {
             "ORDER_ID": "ORD000014",
             "customer_id": "CUST3705",
-            "CUSTOMER_NAME": "Jennifer Zavala",
+            "name": "Jennifer Zavala",
             "customer_email": "wilsontara@gmail.com",
             "ORDER_DATE": "2026-02-22 02:48:00",
             "product_id": "PROD371",
@@ -311,7 +311,7 @@
         {
             "ORDER_ID": "ORD000015",
             "customer_id": "CUST8177",
-            "CUSTOMER_NAME": "Kayla Cruz",
+            "name": "Kayla Cruz",
             "customer_email": "bradley60@frost.com",
             "ORDER_DATE": "2026-04-21 17:48:00",
             "product_id": "PROD629",
@@ -333,7 +333,7 @@
         {
             "ORDER_ID": "ORD000016",
             "customer_id": "CUST1964",
-            "CUSTOMER_NAME": "April Mitchell",
+            "name": "April Mitchell",
             "customer_email": "steven73@hotmail.com",
             "ORDER_DATE": "2025-06-23 00:37:00",
             "product_id": "PROD334",
@@ -355,7 +355,7 @@
         {
             "ORDER_ID": "ORD000017",
             "customer_id": "  CUST8744  ",
-            "CUSTOMER_NAME": "Angel Perry",
+            "name": "Angel Perry",
             "customer_email": "psnyder@douglas.com",
             "ORDER_DATE": "2025-05-23 21:31:00",
             "product_id": "PROD348",
@@ -377,7 +377,7 @@
         {
             "ORDER_ID": "ORD000018",
             "customer_id": "CUST2612",
-            "CUSTOMER_NAME": "Stephanie Simmons",
+            "name": "Stephanie Simmons",
             "customer_email": "juliawells@yahoo.com",
             "ORDER_DATE": "2025-02-19 21:27:00",
             "product_id": "PROD162",
@@ -399,7 +399,7 @@
         {
             "ORDER_ID": "ORD000019",
             "customer_id": "CUST8260",
-            "CUSTOMER_NAME": "Jennifer Clark",
+            "name": "Jennifer Clark",
             "customer_email": "lstein@hotmail.com",
             "ORDER_DATE": "2025-04-09 06:34:00",
             "product_id": "PROD927",
@@ -421,7 +421,7 @@
         {
             "ORDER_ID": "ORD000020",
             "customer_id": "CUST7658",
-            "CUSTOMER_NAME": "Ms. Susan Vargas",
+            "name": "Ms. Susan Vargas",
             "customer_email": "dayderek@white-green.com",
             "ORDER_DATE": "2025-11-30 17:53:00",
             "product_id": "PROD597",
@@ -443,7 +443,7 @@
         {
             "ORDER_ID": "ORD000021",
             "customer_id": "CUST8973",
-            "CUSTOMER_NAME": "Travis Marshall",
+            "name": "Travis Marshall",
             "customer_email": "gary91@gmail.com",
             "ORDER_DATE": "2025-07-14 00:24:00",
             "product_id": "PROD258",
@@ -465,7 +465,7 @@
         {
             "ORDER_ID": "ORD000022",
             "customer_id": "CUST1931",
-            "CUSTOMER_NAME": "Mary Jones",
+            "name": "Mary Jones",
             "customer_email": "atkinsonlynn@gmail.com",
             "ORDER_DATE": "2026-01-18 10:03:00",
             "product_id": "PROD620",
@@ -487,7 +487,7 @@
         {
             "ORDER_ID": "ORD000023",
             "customer_id": "CUST2343",
-            "CUSTOMER_NAME": "Roger Vargas",
+            "name": "Roger Vargas",
             "customer_email": "mariahmiller@yahoo.com",
             "ORDER_DATE": "2025-12-12 07:25:00",
             "product_id": "PROD529",
@@ -509,7 +509,7 @@
         {
             "ORDER_ID": "ORD000024",
             "customer_id": "CUST8491",
-            "CUSTOMER_NAME": "Michael West",
+            "name": "Michael West",
             "customer_email": "phillipsrichard@torres.com",
             "ORDER_DATE": "2026-04-24 08:13:00",
             "product_id": "PROD423",
@@ -531,7 +531,7 @@
         {
             "ORDER_ID": "ORD000025",
             "customer_id": "CUST7054",
-            "CUSTOMER_NAME": "Christopher Smith",
+            "name": "Christopher Smith",
             "customer_email": "brandon08@terry-martinez.info",
             "ORDER_DATE": "2025-02-07 17:13:00",
             "product_id": "PROD391",
@@ -553,7 +553,7 @@
         {
             "ORDER_ID": "ORD000026",
             "customer_id": "CUST3200",
-            "CUSTOMER_NAME": "Jennifer Carlson",
+            "name": "Jennifer Carlson",
             "customer_email": "chayes@dalton-branch.com",
             "ORDER_DATE": "2025-11-10 20:33:00",
             "product_id": "PROD370",
@@ -575,7 +575,7 @@
         {
             "ORDER_ID": "ORD000027",
             "customer_id": "CUST9280",
-            "CUSTOMER_NAME": "Tammy French",
+            "name": "Tammy French",
             "customer_email": "owilson@hernandez.com",
             "ORDER_DATE": "2025-05-20 09:38:00",
             "product_id": "PROD600",
@@ -597,7 +597,7 @@
         {
             "ORDER_ID": "ORD000028",
             "customer_id": "CUST8239",
-            "CUSTOMER_NAME": "Peter Ruiz",
+            "name": "Peter Ruiz",
             "customer_email": "howard96@hotmail.com",
             "ORDER_DATE": "2026-03-01 08:02:00",
             "product_id": "PROD664",
@@ -619,7 +619,7 @@
         {
             "ORDER_ID": "ORD000029",
             "customer_id": "CUST8041",
-            "CUSTOMER_NAME": "Raymond Hancock",
+            "name": "Raymond Hancock",
             "customer_email": null,
             "ORDER_DATE": "2025-02-08 22:57:00",
             "product_id": "PROD230",
@@ -641,7 +641,7 @@
         {
             "ORDER_ID": "ORD000030",
             "customer_id": "CUST3532",
-            "CUSTOMER_NAME": "Michael Perry",
+            "name": "Michael Perry",
             "customer_email": "jsanchez@gmail.com",
             "ORDER_DATE": "2025-04-18 21:15:00",
             "product_id": "PROD342",
@@ -663,7 +663,7 @@
         {
             "ORDER_ID": "ORD000031",
             "customer_id": "CUST5065",
-            "CUSTOMER_NAME": "Frank Lopez",
+            "name": "Frank Lopez",
             "customer_email": "xhall@williams-garner.biz",
             "ORDER_DATE": "2025-04-02 23:59:00",
             "product_id": "PROD373",
@@ -685,7 +685,7 @@
         {
             "ORDER_ID": "ORD000032",
             "customer_id": null,
-            "CUSTOMER_NAME": "Tracy Jones",
+            "name": "Tracy Jones",
             "customer_email": "cindy61@yahoo.com",
             "ORDER_DATE": "2026-03-23 01:54:00",
             "product_id": "PROD328",
@@ -707,7 +707,7 @@
         {
             "ORDER_ID": "ORD000033",
             "customer_id": "CUST6425",
-            "CUSTOMER_NAME": "Elaine Brooks",
+            "name": "Elaine Brooks",
             "customer_email": "amandaknight@jackson.org",
             "ORDER_DATE": "2025-05-23 02:49:00",
             "product_id": "PROD128",
@@ -729,7 +729,7 @@
         {
             "ORDER_ID": "ORD000034",
             "customer_id": "CUST2894",
-            "CUSTOMER_NAME": "Jessica Wright",
+            "name": "Jessica Wright",
             "customer_email": "yvonnecastaneda@gmail.com",
             "ORDER_DATE": "2025-01-20 03:38:00",
             "product_id": "PROD494",
@@ -751,7 +751,7 @@
         {
             "ORDER_ID": "ORD000035",
             "customer_id": "CUST6967",
-            "CUSTOMER_NAME": "Mark Williams",
+            "name": "Mark Williams",
             "customer_email": "rileyjessica@gmail.com",
             "ORDER_DATE": "2025-01-01 16:59:00",
             "product_id": "PROD541",
@@ -773,7 +773,7 @@
         {
             "ORDER_ID": "ORD000036",
             "customer_id": "CUST5844",
-            "CUSTOMER_NAME": "James Baker",
+            "name": "James Baker",
             "customer_email": "vrichardson@baker.com",
             "ORDER_DATE": "2025-12-06 03:46:00",
             "product_id": "PROD667",
@@ -795,7 +795,7 @@
         {
             "ORDER_ID": "ORD000037",
             "customer_id": "CUST5978",
-            "CUSTOMER_NAME": "Melissa Fernandez",
+            "name": "Melissa Fernandez",
             "customer_email": "fpena@russell.com",
             "ORDER_DATE": "2025-12-13 23:57:00",
             "product_id": "PROD393",
@@ -817,7 +817,7 @@
         {
             "ORDER_ID": "ORD000038",
             "customer_id": "CUST3780",
-            "CUSTOMER_NAME": "Christine Gallegos",
+            "name": "Christine Gallegos",
             "customer_email": "lisahall@kramer.com",
             "ORDER_DATE": "2025-08-27 14:28:00",
             "product_id": "PROD774",
@@ -839,7 +839,7 @@
         {
             "ORDER_ID": "ORD000039",
             "customer_id": "CUST8784",
-            "CUSTOMER_NAME": "Karen Strickland",
+            "name": "Karen Strickland",
             "customer_email": "ngordon@acosta.net",
             "ORDER_DATE": "2025-02-17 07:43:00",
             "product_id": "PROD725",
@@ -861,7 +861,7 @@
         {
             "ORDER_ID": "ORD000040",
             "customer_id": "CUST1090",
-            "CUSTOMER_NAME": "Larry Garcia",
+            "name": "Larry Garcia",
             "customer_email": "russellbeasley@morgan-chavez.biz",
             "ORDER_DATE": "2026-03-30 20:36:00",
             "product_id": "PROD868",
@@ -883,7 +883,7 @@
         {
             "ORDER_ID": "ORD000041",
             "customer_id": "CUST3184",
-            "CUSTOMER_NAME": "Dwayne Edwards",
+            "name": "Dwayne Edwards",
             "customer_email": "ericolson@bell.com",
             "ORDER_DATE": "2025-04-01 22:33:00",
             "product_id": "PROD920",
@@ -905,7 +905,7 @@
         {
             "ORDER_ID": "ORD000042",
             "customer_id": "CUST8777",
-            "CUSTOMER_NAME": "Jennifer Thomas",
+            "name": "Jennifer Thomas",
             "customer_email": "reesejason@chavez-moore.com",
             "ORDER_DATE": "2026-05-02 14:39:00",
             "product_id": "PROD560",
@@ -927,7 +927,7 @@
         {
             "ORDER_ID": "ORD000043",
             "customer_id": "CUST6502",
-            "CUSTOMER_NAME": "Katelyn Estrada",
+            "name": "Katelyn Estrada",
             "customer_email": "randallgreene@harris.com",
             "ORDER_DATE": "2026-01-28 16:31:00",
             "product_id": "PROD427",
@@ -949,7 +949,7 @@
         {
             "ORDER_ID": "ORD000044",
             "customer_id": "CUST2020",
-            "CUSTOMER_NAME": "Alex Nguyen",
+            "name": "Alex Nguyen",
             "customer_email": "christopher13@yahoo.com",
             "ORDER_DATE": "2025-07-16 22:09:00",
             "product_id": "PROD311",
@@ -971,7 +971,7 @@
         {
             "ORDER_ID": "ORD000045",
             "customer_id": "CUST9818",
-            "CUSTOMER_NAME": "Lance Wolf",
+            "name": "Lance Wolf",
             "customer_email": "stephanieburton@webster-wolf.info",
             "ORDER_DATE": "2026-03-15 18:24:00",
             "product_id": "PROD865",
@@ -993,7 +993,7 @@
         {
             "ORDER_ID": "ORD000046",
             "customer_id": "CUST3704",
-            "CUSTOMER_NAME": "Benjamin Murray",
+            "name": "Benjamin Murray",
             "customer_email": "woodjustin@lin.net",
             "ORDER_DATE": "2025-04-23 08:27:00",
             "product_id": "PROD960",
@@ -1015,7 +1015,7 @@
         {
             "ORDER_ID": "ORD000047",
             "customer_id": "CUST3977",
-            "CUSTOMER_NAME": "Kelly Bishop MD",
+            "name": "Kelly Bishop MD",
             "customer_email": "vortiz@hotmail.com",
             "ORDER_DATE": "2026-04-10 12:37:00",
             "product_id": "PROD151",
@@ -1037,7 +1037,7 @@
         {
             "ORDER_ID": "ORD000048",
             "customer_id": "CUST8705",
-            "CUSTOMER_NAME": "Maria Murphy",
+            "name": "Maria Murphy",
             "customer_email": "lucasrodney@smith-parker.com",
             "ORDER_DATE": "2025-06-17 10:48:00",
             "product_id": "PROD119",
@@ -1059,7 +1059,7 @@
         {
             "ORDER_ID": "ORD000049",
             "customer_id": "  CUST3496  ",
-            "CUSTOMER_NAME": "Sandy Stephenson",
+            "name": "Sandy Stephenson",
             "customer_email": "  nancy92@bennett.org  ",
             "ORDER_DATE": "2025-11-29 02:49:00",
             "product_id": "PROD344",
@@ -1081,7 +1081,7 @@
         {
             "ORDER_ID": "ORD000050",
             "customer_id": "CUST3683",
-            "CUSTOMER_NAME": "Cheyenne Gregory",
+            "name": "Cheyenne Gregory",
             "customer_email": "xhammond@yahoo.com",
             "ORDER_DATE": "2025-08-27 22:16:00",
             "product_id": "PROD418",
@@ -1103,7 +1103,7 @@
         {
             "ORDER_ID": "ORD000051",
             "customer_id": "CUST5941",
-            "CUSTOMER_NAME": "Stacey Arias",
+            "name": "Stacey Arias",
             "customer_email": "sandersnathaniel@yahoo.com",
             "ORDER_DATE": "2025-07-23 22:12:00",
             "product_id": "PROD970",
@@ -1125,7 +1125,7 @@
         {
             "ORDER_ID": "ORD000052",
             "customer_id": "CUST9031",
-            "CUSTOMER_NAME": "  Ruben Dunn  ",
+            "name": "  Ruben Dunn  ",
             "customer_email": "parsonsjohn@gmail.com",
             "ORDER_DATE": "2025-06-27 17:27:00",
             "product_id": "PROD208",
@@ -1147,7 +1147,7 @@
         {
             "ORDER_ID": "ORD000053",
             "customer_id": "CUST8921",
-            "CUSTOMER_NAME": "Virginia Spencer",
+            "name": "Virginia Spencer",
             "customer_email": "ywilliams@yahoo.com",
             "ORDER_DATE": "2025-08-11 05:46:00",
             "product_id": "PROD576",
@@ -1169,7 +1169,7 @@
         {
             "ORDER_ID": "ORD000054",
             "customer_id": "CUST7209",
-            "CUSTOMER_NAME": "Eric Sanders",
+            "name": "Eric Sanders",
             "customer_email": "benjamin34@yahoo.com",
             "ORDER_DATE": "2025-06-15 07:53:00",
             "product_id": "PROD444",
@@ -1191,7 +1191,7 @@
         {
             "ORDER_ID": "ORD000055",
             "customer_id": "CUST1166",
-            "CUSTOMER_NAME": "Brian Murphy",
+            "name": "Brian Murphy",
             "customer_email": "sean62@hotmail.com",
             "ORDER_DATE": "2025-04-19 11:51:00",
             "product_id": "PROD629",
@@ -1213,7 +1213,7 @@
         {
             "ORDER_ID": "ORD000056",
             "customer_id": "CUST2524",
-            "CUSTOMER_NAME": "Jessica Martinez",
+            "name": "Jessica Martinez",
             "customer_email": "michael90@hernandez.info",
             "ORDER_DATE": "2025-09-08 17:48:00",
             "product_id": "PROD401",
@@ -1235,7 +1235,7 @@
         {
             "ORDER_ID": "ORD000057",
             "customer_id": "CUST6419",
-            "CUSTOMER_NAME": "Donna Hendricks DDS",
+            "name": "Donna Hendricks DDS",
             "customer_email": "melissahayes@wallace.com",
             "ORDER_DATE": "2025-12-06 18:23:00",
             "product_id": "PROD460",
@@ -1257,7 +1257,7 @@
         {
             "ORDER_ID": "ORD000058",
             "customer_id": "CUST4033",
-            "CUSTOMER_NAME": "Kenneth Mcdonald",
+            "name": "Kenneth Mcdonald",
             "customer_email": "jonesraymond@higgins.org",
             "ORDER_DATE": "2025-04-29 03:46:00",
             "product_id": "PROD296",
@@ -1279,7 +1279,7 @@
         {
             "ORDER_ID": "ORD000059",
             "customer_id": "CUST5494",
-            "CUSTOMER_NAME": "Kelly Campbell",
+            "name": "Kelly Campbell",
             "customer_email": "james84@weber.net",
             "ORDER_DATE": "2025-02-21 06:18:00",
             "product_id": "PROD146",
@@ -1301,7 +1301,7 @@
         {
             "ORDER_ID": "ORD000060",
             "customer_id": "CUST1841",
-            "CUSTOMER_NAME": "Amanda Small",
+            "name": "Amanda Small",
             "customer_email": "timothy64@yahoo.com",
             "ORDER_DATE": "2025-11-23 15:06:00",
             "product_id": "PROD358",
@@ -1323,7 +1323,7 @@
         {
             "ORDER_ID": "ORD000061",
             "customer_id": "CUST5066",
-            "CUSTOMER_NAME": "Charles Williams",
+            "name": "Charles Williams",
             "customer_email": "kwright@yahoo.com",
             "ORDER_DATE": "2025-09-09 02:36:00",
             "product_id": "PROD221",
@@ -1345,7 +1345,7 @@
         {
             "ORDER_ID": "ORD000062",
             "customer_id": "CUST6003",
-            "CUSTOMER_NAME": "Stephen Luna",
+            "name": "Stephen Luna",
             "customer_email": "brandon09@hotmail.com",
             "ORDER_DATE": "2026-02-02 16:24:00",
             "product_id": "PROD682",
@@ -1367,7 +1367,7 @@
         {
             "ORDER_ID": "ORD000063",
             "customer_id": "CUST2229",
-            "CUSTOMER_NAME": "Brittany Barry",
+            "name": "Brittany Barry",
             "customer_email": "sarah52@ewing-stevenson.com",
             "ORDER_DATE": "2026-05-01 06:40:00",
             "product_id": "PROD260",
@@ -1389,7 +1389,7 @@
         {
             "ORDER_ID": "ORD000064",
             "customer_id": "CUST4824",
-            "CUSTOMER_NAME": "Patricia James",
+            "name": "Patricia James",
             "customer_email": "armstrongjackie@smith.biz",
             "ORDER_DATE": "2025-05-30 01:14:00",
             "product_id": "PROD370",
@@ -1411,7 +1411,7 @@
         {
             "ORDER_ID": "ORD000065",
             "customer_id": "CUST1977",
-            "CUSTOMER_NAME": "Megan Dillon",
+            "name": "Megan Dillon",
             "customer_email": "plee@yahoo.com",
             "ORDER_DATE": "2025-08-06 03:34:00",
             "product_id": "PROD269",
@@ -1433,7 +1433,7 @@
         {
             "ORDER_ID": "ORD000066",
             "customer_id": "CUST8172",
-            "CUSTOMER_NAME": "Mary Burgess",
+            "name": "Mary Burgess",
             "customer_email": "marianelson@horton.org",
             "ORDER_DATE": "2025-08-13 03:29:00",
             "product_id": "PROD182",
@@ -1455,7 +1455,7 @@
         {
             "ORDER_ID": null,
             "customer_id": "CUST1339",
-            "CUSTOMER_NAME": "Erica Brewer",
+            "name": "Erica Brewer",
             "customer_email": "amandasharp@gentry.biz",
             "ORDER_DATE": "2025-11-06 08:01:00",
             "product_id": "PROD883",
@@ -1477,7 +1477,7 @@
         {
             "ORDER_ID": "ORD000068",
             "customer_id": "CUST8141",
-            "CUSTOMER_NAME": "Jimmy Scott",
+            "name": "Jimmy Scott",
             "customer_email": "doylekrystal@craig.biz",
             "ORDER_DATE": "2026-01-26 05:30:00",
             "product_id": "PROD750",
@@ -1499,7 +1499,7 @@
         {
             "ORDER_ID": "ORD000069",
             "customer_id": "CUST7561",
-            "CUSTOMER_NAME": "Julie Moore",
+            "name": "Julie Moore",
             "customer_email": "fowlershelia@yahoo.com",
             "ORDER_DATE": "2025-07-29 10:20:00",
             "product_id": "PROD933",
@@ -1521,7 +1521,7 @@
         {
             "ORDER_ID": "ORD000070",
             "customer_id": "CUST9889",
-            "CUSTOMER_NAME": "Ashley Poole",
+            "name": "Ashley Poole",
             "customer_email": "franklinbond@wilson-harris.org",
             "ORDER_DATE": "2025-06-11 08:20:00",
             "product_id": "PROD573",
@@ -1543,7 +1543,7 @@
         {
             "ORDER_ID": "ORD000071",
             "customer_id": "CUST8178",
-            "CUSTOMER_NAME": "Jason Mack",
+            "name": "Jason Mack",
             "customer_email": "victoria67@yahoo.com",
             "ORDER_DATE": "2025-11-15 15:40:00",
             "product_id": "PROD815",
@@ -1565,7 +1565,7 @@
         {
             "ORDER_ID": "ORD000072",
             "customer_id": "CUST8560",
-            "CUSTOMER_NAME": "Christopher Lopez",
+            "name": "Christopher Lopez",
             "customer_email": "pachecorobert@allen.com",
             "ORDER_DATE": "2025-12-30 05:19:00",
             "product_id": "PROD220",
@@ -1587,7 +1587,7 @@
         {
             "ORDER_ID": "ORD000073",
             "customer_id": "CUST3369",
-            "CUSTOMER_NAME": "Charles Keller",
+            "name": "Charles Keller",
             "customer_email": "dturner@fry.biz",
             "ORDER_DATE": "2025-09-18 22:17:00",
             "product_id": "PROD492",
@@ -1609,7 +1609,7 @@
         {
             "ORDER_ID": "ORD000074",
             "customer_id": "CUST5634",
-            "CUSTOMER_NAME": "Kristin Anderson",
+            "name": "Kristin Anderson",
             "customer_email": "james17@davis-hardy.com",
             "ORDER_DATE": "2026-03-19 02:17:00",
             "product_id": "PROD843",
@@ -1631,7 +1631,7 @@
         {
             "ORDER_ID": "ORD000075",
             "customer_id": "CUST8460",
-            "CUSTOMER_NAME": "Michele Sanders",
+            "name": "Michele Sanders",
             "customer_email": "kimberly67@wong.info",
             "ORDER_DATE": "2026-03-20 04:28:00",
             "product_id": "PROD429",
@@ -1653,7 +1653,7 @@
         {
             "ORDER_ID": "ORD000076",
             "customer_id": "CUST3492",
-            "CUSTOMER_NAME": "Phillip Burns",
+            "name": "Phillip Burns",
             "customer_email": "yjackson@yahoo.com",
             "ORDER_DATE": "2025-04-30 13:02:00",
             "product_id": "PROD607",
@@ -1675,7 +1675,7 @@
         {
             "ORDER_ID": "ORD000077",
             "customer_id": "CUST7717",
-            "CUSTOMER_NAME": "Jennifer Smith",
+            "name": "Jennifer Smith",
             "customer_email": "andre62@gmail.com",
             "ORDER_DATE": "2026-03-22 03:55:00",
             "product_id": "PROD991",
@@ -1697,7 +1697,7 @@
         {
             "ORDER_ID": "ORD000078",
             "customer_id": "CUST7226",
-            "CUSTOMER_NAME": "Shannon Malone",
+            "name": "Shannon Malone",
             "customer_email": "jgray@brown-smith.com",
             "ORDER_DATE": "2025-06-23 19:44:00",
             "product_id": "PROD424",
@@ -1719,7 +1719,7 @@
         {
             "ORDER_ID": "ORD000079",
             "customer_id": "CUST2646",
-            "CUSTOMER_NAME": null,
+            "name": null,
             "customer_email": "francisco39@rhodes-fernandez.biz",
             "ORDER_DATE": "2025-11-13 02:15:00",
             "product_id": "PROD554",
@@ -1741,7 +1741,7 @@
         {
             "ORDER_ID": "ORD000080",
             "customer_id": "CUST3950",
-            "CUSTOMER_NAME": "Juan Bennett",
+            "name": "Juan Bennett",
             "customer_email": "nmiller@yates-marquez.com",
             "ORDER_DATE": "2025-06-16 01:18:00",
             "product_id": "PROD274",
@@ -1763,7 +1763,7 @@
         {
             "ORDER_ID": "ORD000081",
             "customer_id": "CUST8622",
-            "CUSTOMER_NAME": "Ashley Davis",
+            "name": "Ashley Davis",
             "customer_email": "michelle04@hughes-miller.net",
             "ORDER_DATE": "2025-09-12 18:09:00",
             "product_id": "PROD394",
@@ -1785,7 +1785,7 @@
         {
             "ORDER_ID": "ORD000082",
             "customer_id": "CUST4263",
-            "CUSTOMER_NAME": "Elijah Patton",
+            "name": "Elijah Patton",
             "customer_email": "sheryl79@hotmail.com",
             "ORDER_DATE": "2026-04-29 11:37:00",
             "product_id": "PROD493",
@@ -1807,7 +1807,7 @@
         {
             "ORDER_ID": "ORD000083",
             "customer_id": "CUST7484",
-            "CUSTOMER_NAME": "Doris Neal",
+            "name": "Doris Neal",
             "customer_email": "markramirez@yahoo.com",
             "ORDER_DATE": "2025-10-20 11:36:00",
             "product_id": "PROD381",
@@ -1829,7 +1829,7 @@
         {
             "ORDER_ID": "ORD000084",
             "customer_id": "CUST6772",
-            "CUSTOMER_NAME": "David Moore",
+            "name": "David Moore",
             "customer_email": "mjones@yahoo.com",
             "ORDER_DATE": "2026-04-12 19:47:00",
             "product_id": "PROD324",
@@ -1851,7 +1851,7 @@
         {
             "ORDER_ID": "ORD000085",
             "customer_id": "CUST3153",
-            "CUSTOMER_NAME": "Lauren Johnston",
+            "name": "Lauren Johnston",
             "customer_email": "peter98@gmail.com",
             "ORDER_DATE": "2025-11-18 03:57:00",
             "product_id": "PROD192",
@@ -1873,7 +1873,7 @@
         {
             "ORDER_ID": "ORD000086",
             "customer_id": "CUST3695",
-            "CUSTOMER_NAME": "Brent Bowen",
+            "name": "Brent Bowen",
             "customer_email": "carlos01@gmail.com",
             "ORDER_DATE": "2025-04-13 04:50:00",
             "product_id": "PROD363",
@@ -1895,7 +1895,7 @@
         {
             "ORDER_ID": "ORD000087",
             "customer_id": "CUST7511",
-            "CUSTOMER_NAME": "Omar Ware",
+            "name": "Omar Ware",
             "customer_email": "tprice@gmail.com",
             "ORDER_DATE": "2026-02-16 03:29:00",
             "product_id": "PROD966",
@@ -1917,7 +1917,7 @@
         {
             "ORDER_ID": "ORD000088",
             "customer_id": "CUST7242",
-            "CUSTOMER_NAME": "Ryan Williamson",
+            "name": "Ryan Williamson",
             "customer_email": "powerslawrence@gmail.com",
             "ORDER_DATE": "2025-01-08 08:34:00",
             "product_id": "PROD942",
@@ -1939,7 +1939,7 @@
         {
             "ORDER_ID": "ORD000089",
             "customer_id": "CUST8606",
-            "CUSTOMER_NAME": "Kari Lee",
+            "name": "Kari Lee",
             "customer_email": "fortiz@yahoo.com",
             "ORDER_DATE": "2025-08-30 00:39:00",
             "product_id": "PROD817",
@@ -1961,7 +1961,7 @@
         {
             "ORDER_ID": "ORD000090",
             "customer_id": "CUST8432",
-            "CUSTOMER_NAME": "Daniel Coleman",
+            "name": "Daniel Coleman",
             "customer_email": "nancy07@bailey-montoya.info",
             "ORDER_DATE": "2025-01-24 01:19:00",
             "product_id": "PROD479",
@@ -1983,7 +1983,7 @@
         {
             "ORDER_ID": "ORD000091",
             "customer_id": "CUST7686",
-            "CUSTOMER_NAME": "Linda Jackson",
+            "name": "Linda Jackson",
             "customer_email": "ashley81@gmail.com",
             "ORDER_DATE": "2025-10-28 23:46:00",
             "product_id": "PROD386",
@@ -2005,7 +2005,7 @@
         {
             "ORDER_ID": "ORD000092",
             "customer_id": "CUST6876",
-            "CUSTOMER_NAME": "Patricia Powell",
+            "name": "Patricia Powell",
             "customer_email": "shawn75@hotmail.com",
             "ORDER_DATE": "2025-08-16 07:54:00",
             "product_id": "PROD162",
@@ -2027,7 +2027,7 @@
         {
             "ORDER_ID": "ORD000093",
             "customer_id": "CUST4362",
-            "CUSTOMER_NAME": "Pamela Williams",
+            "name": "Pamela Williams",
             "customer_email": "martinezmia@yahoo.com",
             "ORDER_DATE": "2025-02-16 21:13:00",
             "product_id": "PROD170",
@@ -2049,7 +2049,7 @@
         {
             "ORDER_ID": "ORD000094",
             "customer_id": "CUST3129",
-            "CUSTOMER_NAME": "Michael Smith",
+            "name": "Michael Smith",
             "customer_email": "mcneilrobert@gmail.com",
             "ORDER_DATE": "2026-02-21 07:21:00",
             "product_id": "PROD653",
@@ -2071,7 +2071,7 @@
         {
             "ORDER_ID": "ORD000095",
             "customer_id": "CUST7897",
-            "CUSTOMER_NAME": "Angelica Garcia",
+            "name": "Angelica Garcia",
             "customer_email": "bbell@moody-wright.com",
             "ORDER_DATE": "2025-03-09 00:22:00",
             "product_id": "PROD638",
@@ -2093,7 +2093,7 @@
         {
             "ORDER_ID": "ORD000096",
             "customer_id": "CUST9543",
-            "CUSTOMER_NAME": "Michael Farmer",
+            "name": "Michael Farmer",
             "customer_email": "matthewsalexander@williams.biz",
             "ORDER_DATE": "2026-02-03 11:32:00",
             "product_id": "PROD408",
@@ -2115,7 +2115,7 @@
         {
             "ORDER_ID": "ORD000097",
             "customer_id": "CUST6277",
-            "CUSTOMER_NAME": "Logan Brown",
+            "name": "Logan Brown",
             "customer_email": "smithderrick@martin.net",
             "ORDER_DATE": "2026-03-10 12:27:00",
             "product_id": "PROD722",
@@ -2137,7 +2137,7 @@
         {
             "ORDER_ID": "ORD000098",
             "customer_id": "CUST2874",
-            "CUSTOMER_NAME": "Megan Wilson",
+            "name": "Megan Wilson",
             "customer_email": "trevinoalexander@ruiz.com",
             "ORDER_DATE": "2025-07-15 19:33:00",
             "product_id": "PROD973",
@@ -2159,7 +2159,7 @@
         {
             "ORDER_ID": "ORD000099",
             "customer_id": "CUST2557",
-            "CUSTOMER_NAME": "Erica Mckenzie",
+            "name": "Erica Mckenzie",
             "customer_email": "shawrachel@gmail.com",
             "ORDER_DATE": "2025-08-09 14:56:00",
             "product_id": "PROD420",
@@ -2181,7 +2181,7 @@
         {
             "ORDER_ID": "ORD000100",
             "customer_id": "CUST7105",
-            "CUSTOMER_NAME": "Dr. Morgan Payne PhD",
+            "name": "Dr. Morgan Payne PhD",
             "customer_email": "randolphandrew@reed.com",
             "ORDER_DATE": "2026-05-04 04:43:00",
             "product_id": "PROD931",
