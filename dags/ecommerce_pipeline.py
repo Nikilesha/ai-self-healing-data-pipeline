@@ -22,6 +22,15 @@ OUTPUT_PATH = os.path.join(
     "orders_cleaned.csv"
 )
 
+FAILED_FILE_PATH = os.getenv(
+    "FAILED_DATA_PATH",
+    "/opt/airflow/data/failed"
+)
+
+FAILED_PATH = os.path.join(
+    FAILED_FILE_PATH,
+    "failed.json"
+)
 JSON_PATH = os.getenv("JSON_FILE_PATH")
 
 # extract, transform, validate functions
@@ -29,7 +38,7 @@ def extract_data():
     task_extract_data()
 
 def transform_data():
-    task_transform_data(JSON_PATH,OUTPUT_PATH)
+    task_transform_data(JSON_PATH,OUTPUT_PATH,FAILED_PATH)
 
 def validate_data():
     pass
