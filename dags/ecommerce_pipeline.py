@@ -36,7 +36,6 @@ JSON_PATH = os.getenv("JSON_FILE_PATH")
 # extract, transform, validate functions
 def extract_data():    
     task_extract_data()
-    
 
 def transform_data():
     task_transform_data(JSON_PATH,OUTPUT_PATH,FAILED_PATH)

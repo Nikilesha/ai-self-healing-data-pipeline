@@ -45,7 +45,7 @@ def task_transform_data(input_file, output_file, failed_file):
         df.drop_duplicates(subset=["order_id"], inplace=True)
 
         # Fill missing customer names
-        df["customer_name"] = df["something"].fillna("unknown customer")
+        df["customer_name"] = df["customer_name"].fillna("unknown customer")
 
         # Fill missing emails
         df["customer_email"] = df["customer_email"].fillna("missing@email.com")

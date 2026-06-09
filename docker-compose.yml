@@ -58,6 +58,7 @@ services:
       PROCESSED_DATA_PATH: ${PROCESSED_DATA_PATH}
       FAILED_DATA_PATH: ${FAILED_DATA_PATH}
       JSON_FILE_PATH: ${JSON_FILE_PATH}
+      METADATA_PATH: ${METADATA_PATH}
 
     command: standalone
     restart: unless-stopped
