@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from tasks.extract import task_extract_data
 from tasks.transform import task_transform_data
 from tasks.validate import task_validate_data
+from tasks.load import task_load_data
 
 load_dotenv()
 
@@ -36,22 +37,6 @@ def extract_data():
 def validate_data():
     task_validate_data(JSON_PATH)
 
-def load_data(**context):
-    ti = context["ti"]
-
-    data = ti.xcom_pull(task_ids="transform_data")
-
-    output_file = data["output_file"]
-    valid_rows = data["valid_rows"]
-
-    print(output_file)
-    print(valid_rows)
-
-    return {
-        "status": "success",
-        "file": output_file,
-        "rows": valid_rows
-    }
 # ---------------- DAG ----------------
 
 with DAG(
@@ -78,10 +63,10 @@ with DAG(
         python_callable=validate_data
     )
 
-    load_task = PythonOperator(
-        task_id="load_data",
-        python_callable=load_data
-    )
+    load_data_task = PythonOperator(
+        task_id = "load_data",
+        python_callable = task_load_data
+    )    
 
     # correct order
-    extract_task >> transform_task >> validate_task >> load_task
+extract_task >> transform_task >> validate_task >> load_data_task

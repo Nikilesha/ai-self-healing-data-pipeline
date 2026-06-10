@@ -1,0 +1,67 @@
+import pandas as pd
+import psycopg2
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+def task_load_data():
+
+    csv_path = os.path.join(
+        os.getenv("PROCESSED_DATA_PATH"),
+        "orders_cleaned.csv"
+    )
+
+    df = pd.read_csv(csv_path)
+
+    conn = psycopg2.connect(
+        host=os.getenv("POSTGRES_HOST"),
+        port=os.getenv("POSTGRES_PORT"),
+        dbname=os.getenv("POSTGRES_DB"),
+        user=os.getenv("POSTGRES_USER"),
+        password=os.getenv("POSTGRES_PASSWORD")
+    )
+
+    cursor = conn.cursor()
+
+    inserted_rows = 0
+
+    for _, row in df.iterrows():
+
+        cursor.execute(
+            """
+            INSERT INTO orders (
+                order_id,
+                customer_name,
+                customer_email,
+                order_date,
+                quantity,
+                total_amount
+            )
+            VALUES (%s,%s,%s,%s,%s,%s)
+            ON CONFLICT (order_id)
+            DO NOTHING
+            """,
+            (
+                str(row["order_id"]),
+                row["customer_name"],
+                row["customer_email"],
+                row["order_date"],
+                int(row["quantity"]),
+                float(row["total_amount"])
+            )
+        )
+
+        inserted_rows += 1
+
+    conn.commit()
+
+    cursor.close()
+    conn.close()
+
+    print(f"Loaded {inserted_rows} rows into PostgreSQL")
+
+    return {
+        "rows_loaded": inserted_rows
+    }
