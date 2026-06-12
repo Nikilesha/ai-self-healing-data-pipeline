@@ -1,0 +1,23 @@
+{
+    "status": "PASSED",
+    "quality_score": 85.84,
+    "health_status": "GOOD",
+    "unhealthy_dataset": false,
+    "report": {
+        "timestamp": "2026-06-12 11:30:32.950551",
+        "total_records": 2020,
+        "missing_customer_name": 39,
+        "missing_email": 40,
+        "missing_order_date": 40,
+        "duplicate_orders": 59,
+        "negative_quantity": 20,
+        "negative_amount": 14,
+        "invalid_order_id": 41,
+        "invalid_quantity": 0,
+        "invalid_total_amount": 0,
+        "invalid_order_date": 40,
+        "stale_records": 1408
+    },
+    "ge_results": {},
+    "timestamp": "2026-06-12 11:30:32.953627"
+}

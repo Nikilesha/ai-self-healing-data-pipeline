@@ -26,42 +26,51 @@ def task_load_data():
     cursor = conn.cursor()
 
     inserted_rows = 0
+    skipped_rows = 0
 
-    for _, row in df.iterrows():
+    try:
+        for _, row in df.iterrows():
 
-        cursor.execute(
-            """
-            INSERT INTO orders (
-                order_id,
-                customer_name,
-                customer_email,
-                order_date,
-                quantity,
-                total_amount
-            )
-            VALUES (%s,%s,%s,%s,%s,%s)
-            ON CONFLICT (order_id)
-            DO NOTHING
-            """,
-            (
+            cursor.execute("""
+                INSERT INTO orders (
+                    order_id,
+                    customer_name,
+                    customer_email,
+                    order_date,
+                    quantity,
+                    total_amount
+                )
+                VALUES (%s,%s,%s,%s,%s,%s)
+                ON CONFLICT (order_id)
+                DO NOTHING
+            """, (
                 str(row["order_id"]),
                 row["customer_name"],
                 row["customer_email"],
                 row["order_date"],
                 int(row["quantity"]),
                 float(row["total_amount"])
-            )
-        )
+            ))
 
-        inserted_rows += 1
+            # IMPORTANT FIX:
+            if cursor.rowcount == 1:
+                inserted_rows += 1
+            else:
+                skipped_rows += 1
 
-    conn.commit()
+        conn.commit()
 
-    cursor.close()
-    conn.close()
+    except Exception as e:
+        conn.rollback()
+        raise e
 
-    print(f"Loaded {inserted_rows} rows into PostgreSQL")
+    finally:
+        cursor.close()
+        conn.close()
+
+    print(f"Inserted: {inserted_rows}, Skipped: {skipped_rows}")
 
     return {
-        "rows_loaded": inserted_rows
+        "rows_inserted": inserted_rows,
+        "rows_skipped": skipped_rows
     }
