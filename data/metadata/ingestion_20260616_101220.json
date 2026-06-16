@@ -4,7 +4,7 @@
     "source": "vendor_api",
     "records_fetched": 2020,
     "status": "SUCCESS",
-    "ingestion_time": "2026-06-10T06:26:03.552753",
-    "duration_seconds": 1.081363,
+    "ingestion_time": "2026-06-16T10:12:21.899702",
+    "duration_seconds": 1.021243,
     "pages_fetched": 21
 }

@@ -5,12 +5,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 def task_load_data():
 
     csv_path = os.path.join(
-        os.getenv("PROCESSED_DATA_PATH"),
-        "orders_cleaned.csv"
+        os.getenv("VALIDATED_DATA_PATH"),
+        "orders_validated.csv"
     )
 
     df = pd.read_csv(csv_path)
@@ -31,6 +30,15 @@ def task_load_data():
     try:
         for _, row in df.iterrows():
 
+            order_date = row["order_date"]
+
+            # handle NaN / empty
+            if pd.isna(order_date) or order_date == "":
+                order_date = None
+            else:
+                order_date = pd.to_datetime(order_date, errors="coerce")
+                order_date = None if pd.isna(order_date) else order_date.to_pydatetime()
+
             cursor.execute("""
                 INSERT INTO orders (
                     order_id,
@@ -41,18 +49,16 @@ def task_load_data():
                     total_amount
                 )
                 VALUES (%s,%s,%s,%s,%s,%s)
-                ON CONFLICT (order_id)
-                DO NOTHING
+                ON CONFLICT (order_id) DO NOTHING
             """, (
                 str(row["order_id"]),
                 row["customer_name"],
                 row["customer_email"],
-                row["order_date"],
+                order_date,
                 int(row["quantity"]),
                 float(row["total_amount"])
             ))
 
-            # IMPORTANT FIX:
             if cursor.rowcount == 1:
                 inserted_rows += 1
             else:
