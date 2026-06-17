@@ -84,6 +84,7 @@ def task_validate_data(file_path):
 
     missing_cols = [c for c in required_columns if c not in df.columns]
     if missing_cols:
+        logger.error("Columns missing")
         raise ValueError(f"Missing required columns: {missing_cols}")
 
     # ---------------- TYPE CLEANING ----------------
@@ -94,6 +95,8 @@ def task_validate_data(file_path):
     df["quantity"] = pd.to_numeric(df["quantity"], errors="coerce")
     df["total_amount"] = pd.to_numeric(df["total_amount"], errors="coerce")
     df["order_date"] = pd.to_datetime(df["order_date"], errors="coerce")
+
+    logger.info("Type cleaning completed")
 
     # ---------------- METRICS ----------------
     cutoff_date = pd.Timestamp.now() - pd.Timedelta(days=180)
@@ -160,6 +163,8 @@ def task_validate_data(file_path):
         health_status = "WARNING"
     else:
         health_status = "CRITICAL"
+
+    logger.info("Health conditions validated")
 
     # ---------------- FAILURE CONDITION ----------------
     failed = (

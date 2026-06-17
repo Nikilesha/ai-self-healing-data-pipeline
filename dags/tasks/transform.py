@@ -28,6 +28,7 @@ def task_transform_data(input_file, output_file, failed_file):
 
         # ---------------- VALIDATE BASIC STRUCTURE ----------------
         if df.empty:
+            logger.error("Empty dataset recieved")
             raise ValueError("Empty dataset received")
 
         required_columns = [
@@ -45,6 +46,7 @@ def task_transform_data(input_file, output_file, failed_file):
 
         missing_columns = [col for col in required_columns if col not in df.columns]
         if missing_columns:
+            logger.warning("missing columns")
             raise ValueError(f"Missing required columns: {missing_columns}")
 
         # ---------------- TYPE CONVERSION (BEFORE SPLIT) ----------------
@@ -87,6 +89,8 @@ def task_transform_data(input_file, output_file, failed_file):
         valid_df["customer_name"] = valid_df["customer_name"].str.strip().str.title()
         valid_df["customer_email"] = valid_df["customer_email"].str.strip().str.lower()
         valid_df["order_status"] = valid_df["order_status"].str.strip().str.title()
+
+        logger.info("Valid data cleaning completed")
 
         # ---------------- BUSINESS RULE FILTERING ----------------
         valid_df = valid_df[
