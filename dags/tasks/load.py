@@ -16,6 +16,7 @@ def task_load_data():
 
     df = pd.read_csv(csv_path)
     try:
+        #---------- establishing connection ----------#
         conn = psycopg2.connect(
             host=os.getenv("POSTGRES_HOST"),
             port=os.getenv("POSTGRES_PORT"),
@@ -25,6 +26,19 @@ def task_load_data():
         )
 
         cursor = conn.cursor()
+        
+        #---------- table creation ----------#
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS orders (
+            order_id VARCHAR(50) PRIMARY KEY,
+            customer_name VARCHAR(255),
+            customer_email VARCHAR(255),
+            order_date TIMESTAMP,
+            quantity INTEGER,
+            total_amount NUMERIC
+        )
+        """)
+        conn.commit()
     except Exception as e:
         logger.error("Database Connection Failed")
 
