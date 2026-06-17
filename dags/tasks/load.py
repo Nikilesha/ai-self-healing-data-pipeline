@@ -35,7 +35,7 @@ def task_load_data():
             customer_email VARCHAR(255),
             order_date TIMESTAMP,
             quantity INTEGER,
-            total_amount NUMERIC
+            total_amount NUMERIC 
         )
         """)
         conn.commit()
