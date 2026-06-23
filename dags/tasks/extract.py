@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 import time
 import logging
+import psycopg2
 from datetime import datetime
 
 logger = logging.getLogger(__name__)
@@ -24,8 +25,44 @@ API_URL = "http://api:8000/orders"
 MAX_RETRIES = 3
 MAX_PAGES = 1000   # safety guard
 
+def already_processed(file_name):
+    try:
+        conn = psycopg2.connect(
+            host=os.getenv("POSTGRES_HOST"),
+            port=os.getenv("POSTGRES_PORT"),
+            dbname=os.getenv("POSTGRES_DB"),
+            user=os.getenv("POSTGRES_USER"),
+            password=os.getenv("POSTGRES_PASSWORD")
+        )
+
+        cursor = conn.cursor()
+        logger.info("Connection established")
+    except Exception as e:
+        logger.error("Database connection failed")
+        logger.error(e)
+        raise
+    finally:
+        cursor.close()
+        conn.close()
+
+    
+    try:
+        cursor.execute("""
+            select 1 from processed_files
+            where file_name =%s
+        """,(file_name,))
+        return cursor.fetchone() is not None
+    except Exception as e:
+        logger.error("Error fetching from database")
+        logger.error(e)
+    
+
 
 def task_extract_data():
+
+    if already_processed(JSON_FILE_PATH):
+        logger.info("Skipping file")
+        return
 
     all_data = []
     page = 1
