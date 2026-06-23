@@ -3,6 +3,7 @@ import os
 import json
 from datetime import datetime
 import logging
+from tasks.schema_drift import detect_schema_drift
 
 logger = logging.getLogger(__name__)
 
@@ -68,6 +69,12 @@ def task_validate_data(file_path):
     df = load_dataframe(file_path)
 
     df.columns = df.columns.str.strip().str.lower()
+
+    logger.info(f"ACTUAL COLUMNS = {df.columns.tolist()}")
+
+    df = detect_schema_drift(df)
+
+    logger.info(f"Validation started | Shape: {df.shape}")
 
     logger.info(f"Validation started | Shape: {df.shape}")
     logger.info(f"Columns: {df.columns.tolist()}")

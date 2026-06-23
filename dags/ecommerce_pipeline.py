@@ -8,6 +8,7 @@ from airflow.utils.trigger_rule import TriggerRule
 
 from tasks.extract import task_extract_data
 from tasks.transform import task_transform_data
+from tasks.schema_drift import detect_schema_drift
 from tasks.validate import task_validate_data
 from tasks.load import task_load_data
 from utils.checkpoint import mark_done, is_done
@@ -86,9 +87,11 @@ def transform_wrapper():
 
 
 def validate_wrapper():
+    '''
     if is_done("validate"):
         logger.info("Skipping validate (already completed)")
         return "SKIPPED"
+    '''
 
     try:
         result = task_validate_data(OUTPUT_PATH)
@@ -106,13 +109,8 @@ def validate_wrapper():
 
 
 def load_wrapper():
-    if is_done("load"):
-        logger.info("Skipping load (already completed)")
-        return "SKIPPED"
-
     try:
         result = task_load_data()
-
         mark_done("load", {"status": "success"})
         return result
 
