@@ -88,7 +88,7 @@ def detect_schema_drift(df):
         )
 
         for col in missing_columns:
-            df[col] = None
+            logger.warning(f"Missing column detected: {col}")
 
             actions_taken.append(
                 f"created_missing_column:{col}"

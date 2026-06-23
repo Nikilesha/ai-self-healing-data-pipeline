@@ -4,6 +4,7 @@ import json
 from datetime import datetime
 import logging
 from tasks.schema_drift import detect_schema_drift
+from tasks.column_mapper import auto_map_columns
 
 logger = logging.getLogger(__name__)
 
@@ -74,7 +75,7 @@ def task_validate_data(file_path):
 
     df = detect_schema_drift(df)
 
-    logger.info(f"Validation started | Shape: {df.shape}")
+    df = auto_map_columns(df)
 
     logger.info(f"Validation started | Shape: {df.shape}")
     logger.info(f"Columns: {df.columns.tolist()}")
