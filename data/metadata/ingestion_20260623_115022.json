@@ -1,0 +1,10 @@
+{
+    "pipeline": "ecommerce_pipeline",
+    "task": "extract",
+    "source": "vendor_api",
+    "records_fetched": 2020,
+    "status": "SUCCESS",
+    "ingestion_time": "2026-06-23T11:50:22.937573",
+    "duration_seconds": 0.80487,
+    "pages_fetched": 21
+}
