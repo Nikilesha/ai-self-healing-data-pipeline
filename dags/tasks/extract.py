@@ -25,6 +25,7 @@ API_URL = "http://api:8000/orders"
 MAX_RETRIES = 3
 MAX_PAGES = 1000   # safety guard
 
+
 def already_processed(file_name):
     try:
         conn = psycopg2.connect(
@@ -67,6 +68,7 @@ def task_extract_data():
     all_data = []
     page = 1
     limit = 100
+    STATUS = False
 
     start_time = datetime.utcnow()
     timestamp = start_time.strftime("%Y%m%d_%H%M%S")
@@ -148,7 +150,9 @@ def task_extract_data():
         with open(JSON_FILE_PATH, "w") as f:
             json.dump(payload, f, indent=4)
 
+        STATUS = True
         logger.info(f"Raw data saved to: {JSON_FILE_PATH}")
+
 
     except Exception as e:
         logger.error(f"Error writing JSON file: {e}")
@@ -167,7 +171,7 @@ def task_extract_data():
             "task": "extract",
             "source": "vendor_api",
             "records_fetched": len(all_data),
-            "status": "SUCCESS",
+            "status": STATUS,
             "ingestion_time": end_time.isoformat(),
             "duration_seconds": (end_time - start_time).total_seconds(),
             "pages_fetched": page

@@ -11,7 +11,7 @@ from tasks.transform import task_transform_data
 from tasks.schema_drift import detect_schema_drift
 from tasks.validate import task_validate_data
 from tasks.load import task_load_data
-from utils.checkpoint import mark_done, is_done
+from utils.checkpoint import mark_done, load_checkpoint
 
 # ---------------- LOGGING ----------------
 logger = logging.getLogger(__name__)
@@ -34,6 +34,7 @@ JSON_PATH = os.getenv(
     "JSON_FILE_PATH",
     "/opt/airflow/data/raw/orders.json"
 )
+checkpoint = None
 
 OUTPUT_PATH = os.path.join(PROCESSED_DATA_PATH, "orders_cleaned.csv")
 FAILED_PATH = os.path.join(FAILED_FILE_PATH, "failed.json")
@@ -50,7 +51,9 @@ default_args = {
 # ---------------- WRAPPERS ----------------
 
 def extract_wrapper():
-    if is_done("extract"):
+    checkpoint = load_checkpoint("extract")
+    if checkpoint:
+        logger.info(checkpoint["meta"])
         logger.info("Skipping extract (already completed)")
         return "SKIPPED"
 
@@ -64,7 +67,9 @@ def extract_wrapper():
 
 
 def transform_wrapper():
-    if is_done("transform"):
+    checkpoint = load_checkpoint("transform")
+    if checkpoint:
+        logger.info(checkpoint["meta"])
         logger.info("Skipping transform (already completed)")
         return "SKIPPED"
 
@@ -87,11 +92,14 @@ def transform_wrapper():
 
 
 def validate_wrapper():
-    '''
-    if is_done("validate"):
+
+    checkpoint = load_checkpoint("validate")
+    if checkpoint:
+        logger.info(checkpoint["meta"])
         logger.info("Skipping validate (already completed)")
         return "SKIPPED"
-    '''
+    
+
 
     try:
         result = task_validate_data(OUTPUT_PATH)

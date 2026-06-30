@@ -1,7 +1,11 @@
 import os
 import json
+from datetime import datetime
+from dotenv import load_dotenv
 
-CHECKPOINT_DIR = "/opt/airflow/checkpoints"
+load_dotenv()
+
+CHECKPOINT_DIR = os.getenv("CHECKPOINT_DIR")
 
 
 def mark_done(step_name, data=None):
@@ -13,13 +17,27 @@ def mark_done(step_name, data=None):
         json.dump({
             "status": "done",
             "step": step_name,
+            "completed at":datetime.utcnow().isoformat(),
             "meta": data or {}
-        }, f)
+        }, f,indent=4)
 
 
-def is_done(step_name):
+def load_checkpoint(step_name):
     path = os.path.join(CHECKPOINT_DIR, f"{step_name}.json")
-    return os.path.exists(path)
+
+    if not os.path.exists(path):
+        return None
+
+    with open(path) as f:
+        return json.load(f)
+
+    try:
+        with open(path, "r") as f:
+            return json.load(f)
+    except json.JSONDecodeError:
+        logger.warning(f"Checkpoint '{step_name}' is corrupted. Removing it.")
+        os.remove(path)
+        return None
 
 
 def clear_all():
