@@ -1,0 +1,11 @@
+{
+    "status": "done",
+    "step": "transform",
+    "completed at": "2026-06-30T09:39:58.016991",
+    "meta": {
+        "status": "success",
+        "valid_rows": 1893,
+        "invalid_rows": 40,
+        "output_file": "/opt/airflow/data/processed/orders_cleaned.csv"
+    }
+}

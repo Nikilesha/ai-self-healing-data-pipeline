@@ -1,0 +1,9 @@
+{
+    "status": "done",
+    "step": "validate",
+    "completed at": "2026-06-30T09:40:03.613567",
+    "meta": {
+        "status": "success",
+        "output_file": "/opt/airflow/data/processed/orders_cleaned.csv"
+    }
+}

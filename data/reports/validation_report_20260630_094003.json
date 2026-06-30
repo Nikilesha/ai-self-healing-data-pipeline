@@ -1,0 +1,32 @@
+{
+    "quality_score": 88.8,
+    "health_status": "GOOD",
+    "datatype_corrections": {
+        "columns_processed": 6,
+        "corrections": {
+            "order_id": "string",
+            "customer_name": "string",
+            "customer_email": "string",
+            "order_date": "datetime",
+            "quantity": "int",
+            "total_amount": "float"
+        }
+    },
+    "report": {
+        "timestamp": "2026-06-30 09:40:03.512069",
+        "total_records": 1893,
+        "missing_customer_name": 0,
+        "missing_email": 0,
+        "missing_order_date": 0,
+        "duplicate_orders": 0,
+        "negative_quantity": 0,
+        "negative_amount": 0,
+        "invalid_order_id": 2,
+        "invalid_quantity": 0,
+        "invalid_total_amount": 0,
+        "invalid_order_date": 0,
+        "stale_records": 1409
+    },
+    "ge_results": {},
+    "timestamp": "2026-06-30 09:40:03.521707"
+}
