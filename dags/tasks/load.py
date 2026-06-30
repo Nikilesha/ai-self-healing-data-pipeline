@@ -4,6 +4,8 @@ import os
 from dotenv import load_dotenv
 import logging
 
+from utils.rollback import save_rollback_batch
+
 logger = logging.getLogger(__name__)
 load_dotenv()
 
@@ -115,6 +117,7 @@ def task_load_data():
 
             processed_rows += 1
 
+
         cursor.execute(
             """
             INSERT INTO processed_files(
@@ -127,15 +130,19 @@ def task_load_data():
             (file_name,),
         )
 
+        
         conn.commit()
 
         logger.info(f"{file_name} marked as processed")
 
     except Exception as e:
         conn.rollback()
-        logger.error("Error writing to database")
-        logger.error(e)
-        raise e
+
+        rollback_file = save_rollback_batch(df,reason =str(e),stage="Load",processed_rows = processed_rows)
+
+        logger.error(f"Rollback created: {rollback_file}")
+        
+        raise
 
     finally:
         cursor.close()
