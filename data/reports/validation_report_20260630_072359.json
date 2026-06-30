@@ -13,7 +13,7 @@
         }
     },
     "report": {
-        "timestamp": "2026-06-30 06:18:39.525692",
+        "timestamp": "2026-06-30 07:23:59.478912",
         "total_records": 1893,
         "missing_customer_name": 0,
         "missing_email": 0,
@@ -28,5 +28,5 @@
         "stale_records": 1408
     },
     "ge_results": {},
-    "timestamp": "2026-06-30 06:18:39.528947"
+    "timestamp": "2026-06-30 07:23:59.482007"
 }
