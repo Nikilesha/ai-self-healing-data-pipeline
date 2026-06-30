@@ -1,6 +1,6 @@
 {
-    "timestamp": "2026-06-23 11:18:52.973060",
-    "drift_detected": true,
+    "timestamp": "2026-06-30 06:18:39.491031",
+    "drift_detected": false,
     "expected_columns": [
         "order_id",
         "customer_id",
@@ -55,14 +55,9 @@
         "revenue",
         "net_amount",
         "order_month",
-        "is_high_value",
-        "test_column"
+        "is_high_value"
     ],
-    "new_columns": [
-        "test_column"
-    ],
+    "new_columns": [],
     "missing_columns": [],
-    "actions_taken": [
-        "detected_new_columns:['test_column']"
-    ]
+    "actions_taken": []
 }

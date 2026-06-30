@@ -5,6 +5,7 @@ from datetime import datetime
 import logging
 from tasks.schema_drift import detect_schema_drift
 from tasks.column_mapper import auto_map_columns
+from tasks.data_corrector import correct_datatypes
 
 logger = logging.getLogger(__name__)
 
@@ -77,6 +78,7 @@ def task_validate_data(file_path):
 
     df = auto_map_columns(df)
 
+
     logger.info(f"Validation started | Shape: {df.shape}")
     logger.info(f"Columns: {df.columns.tolist()}")
 
@@ -96,15 +98,10 @@ def task_validate_data(file_path):
         raise ValueError(f"Missing required columns: {missing_cols}")
 
     # ---------------- TYPE CLEANING ----------------
-    df["order_id"] = (
-        df["order_id"].fillna("").astype(str).str.strip().replace("nan", "")
-    )
+    df, correction_summary = correct_datatypes(df)
 
-    df["quantity"] = pd.to_numeric(df["quantity"], errors="coerce")
-    df["total_amount"] = pd.to_numeric(df["total_amount"], errors="coerce")
-    df["order_date"] = pd.to_datetime(df["order_date"], errors="coerce")
-
-    logger.info("Type cleaning completed")
+    logger.info("Auto datatype correction completed")
+    logger.info(f"Datatype correction summary: {correction_summary}")
 
     # ---------------- METRICS ----------------
     cutoff_date = pd.Timestamp.now() - pd.Timedelta(days=180)
@@ -202,6 +199,7 @@ def task_validate_data(file_path):
     report_data = {
         "quality_score": quality_score,
         "health_status": health_status,
+        "datatype_corrections": correction_summary,
         "report": report,
         "ge_results": ge_results,
         "timestamp": str(datetime.now()),
