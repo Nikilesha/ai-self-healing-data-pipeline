@@ -2,6 +2,13 @@
 
 **A production-style Apache Airflow ETL pipeline with schema drift detection, checkpoint-based recovery, quarantine logic, and automated data quality scoring — built end-to-end with Docker, PostgreSQL, and FastAPI.**
 
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Airflow](https://img.shields.io/badge/Apache%20Airflow-2.8-red?logo=apacheairflow)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?logo=postgresql)
+![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Portfolio%20Project-yellow)
+
 ---
 
 ## Overview
